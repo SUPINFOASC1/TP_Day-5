@@ -1,8 +1,8 @@
 # TP_Day-5
-tp du jour 5
+# tp du jour 5
 from random import randint
 
-"""Give a name and make comments"""
+"""Antoine and make comments"""
 
 def initCache(nbColors=6,nbPawns=4):
 
@@ -10,7 +10,7 @@ def initCache(nbColors=6,nbPawns=4):
 
  
 
-"""Give a name and make comments"""
+"""Antoine and make comments"""
 
 def choose(nbColors=6,nbPawns=4):
 
@@ -40,7 +40,7 @@ def choose(nbColors=6,nbPawns=4):
 
  
 
-"""Valentin and make comments"""
+"""Give a name and make comments"""
 
 def evaluation(selected,cache):
 
