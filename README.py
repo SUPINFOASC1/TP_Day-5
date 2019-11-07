@@ -1,20 +1,16 @@
 # TP_Day-5
-tp du jour 5
+# tp du jour 5
 from random import randint
 
-"""Give a name and make comments"""
+"""Antoine and make comments"""
 
 def initCache(nbColors=6,nbPawns=4):
 
-<<<<<<< HEAD
-    return [randint(1,nbColors) for i in range(nbPawns)]:
-=======
     return [randint(1,nbColors) for i in range(nbPawns)]
->>>>>>> master
 
  
 
-"""Give a name and make comments"""
+"""Antoine and make comments"""
 
 def choose(nbColors=6,nbPawns=4):
 
