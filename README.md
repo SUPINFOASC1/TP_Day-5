@@ -1,6 +1,6 @@
 # TP_Day-5
 tp du jour 5
-from random import randnt
+from random import randint
 
 """Give a name and make comments"""
 
