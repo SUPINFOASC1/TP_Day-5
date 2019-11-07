@@ -1,16 +1,13 @@
-# TP_Day-5
-"""tp du jour 5"""
 from random import randint
 
-"""Give a name and make comments"""
+"""crée une fonction avec deux paramètres nbColors et nbPawns initialisés respectivement à 6 et 4 qui va
+ retourne un chiffre aléatoire entre 1 et 6 à chaque fois que le nombre "1" apparaît dans les pions du jeu"""
 
 def initCache(nbColors=6,nbPawns=4):
 
     return [randint(1,nbColors) for i in range(nbPawns)]
 
- 
 
-"""Give a name and make comments"""
 
 def choose(nbColors=6,nbPawns=4):
 
@@ -18,21 +15,25 @@ def choose(nbColors=6,nbPawns=4):
 
     while nocorrect:
 
-        nocorrect = False
+        nocorrect = False  
+        #tant que nocorrect est faux, la boucle propose à l'utilisateur de rentrer une suite de couleur.
 
         selected = input('Input your proposal: ')
 
-        if len(selecte) == nbPawns:
+        if len(selecte) == nbPawns: 
+            #si le nombre de la proposition est le même que la quite de pions,alors à x est attribué la proposition de l'utilisateur.
 
             selected = [int(x) for x in list(selected)]
 
-            for x in selected:
+            for x in selected:  
+                #pour x dans proposition, si x est inférieur à 1 ou x supérieur à nbColors, alors nocorrect devient vrai(True)
 
                 if (x<1) or (x>nbColor):
 
                     nocorrect = True
 
         else:
+            #si le nombre proposition est différent de nbPawns, nocorrect est égal à Vrai
 
             nocorrect = True
 
@@ -40,18 +41,19 @@ def choose(nbColors=6,nbPawns=4):
 
  
 
-"""Give a name and make comments"""
-"""Valentin and make comments"""
 
-def evaluation(selected,cache):
 
-    WellPut = 0
+def evaluation(selected,cache): #créer une fonction "evaluation" à deux paramètres(selected et cache)
 
+    WellPut = 0 
+#crée deux variables WellPut et Misplaced initialisés à 0 
     Misplaced = 0
 
-    copySelected,copyCache = list(selected),list(cache)
+    copySelected,copyCache = list(selected),list(cache) 
 
     for i in range(len(cache)):
+        #pour le nombre de i dans len(cache) et le nombre de j, si copyslected et copycache sont égaux, 
+        # alors Wellput gagne 1 ou Misplaced gagne 1 sinon copyslected et copycache retournent à -1
 
         if copySelected[i] == copyCache[i]:
 
@@ -73,7 +75,7 @@ def evaluation(selected,cache):
 
  
 
-"""Give a name and make comments"""
+#créer une focntion qui affiche le nombre de couleurs bonnes et fausses dans la séquence
 
 def display(well,bad):
 
@@ -81,20 +83,20 @@ def display(well,bad):
 
  
 
-"""Give a name and make comments"""
+
 
 def displayCache(cache):
-
+#défini la fonction affichage cache.
     for x in cache:
 
         print(x,end='')
 
  
 
-"""Give a name and make comments"""
+
 
 def gameParameters():
-
+#défini les paramètres de jeux: le nombre de couleurs, la longueur de la séquence et le nombre d'essais.
     nbC = int(input('Input the number of colors: '))
 
     nbP = int(input(' Enter the length of the sequence to guess: '))
@@ -108,6 +110,7 @@ def gameParameters():
 """Give a name and make comments"""
 
 def master():
+#défini ules conditions de gagne ou de perte de la partie
 
     nbC,nbP,nbTry = gameParameters()
 
@@ -120,6 +123,7 @@ def master():
     print()
 
     while notFound and (tries<=nbTry):
+        #si l'utilisateur a gagné, aucun essais sont disponibles possible, sinon tries +=1
 
         print('try',tries)
 
@@ -149,11 +153,12 @@ def master():
 
  
 
-"""Give a name and make comments"""
+
 
 def chooseGame(S,possibles,results,tries):
 
     if tries==1:
+        
 
         return [1,1,2,2]
 
@@ -167,7 +172,7 @@ def chooseGame(S,possibles,results,tries):
 
  
 
-"""Give a name and make comments"""
+
 
 def chooseGameBis(S,possibles,results,tries):
 
@@ -211,7 +216,6 @@ def chooseGameBis(S,possibles,results,tries):
 
                 
 
-"""Give a name and make comments"""
 
 def game():
 
@@ -266,10 +270,10 @@ def game():
         print("He is strong, he found", end=' ')
 
         displayCache(cache)
-
+#si l'utilisateur a perdu, message d'erreur s'affiche. S'il a gagné le message de la partie gagné s'affiche.
                
 
-"""Give a name and make comments"""
+#Appelle la fonction game et lance le jeu
 
 game()
 
