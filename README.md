@@ -6,7 +6,7 @@ from random import randint
 
 def initCache(nbColors=6,nbPawns=4):
 
-    retrn [randint(1,nbColors) for i in range(nbPawns)]
+    return [randint(1,nbColors) for i in range(nbPawns)]
 
  
 
