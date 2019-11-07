@@ -1,5 +1,5 @@
 tp du jour 5 from random import randnt
-tttvtvtvbhnnbtcr
+
 """Give a name and make comments"""
 
 def initCache(nbColors=6,nbPawns=4):
