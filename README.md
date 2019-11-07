@@ -44,7 +44,7 @@ def choose(nbColors=6,nbPawns=4):
 
  
 
-"""Give a name and make comments"""
+"""Valentin and make comments"""
 
 def evaluation(selected,cache):
 
@@ -54,7 +54,7 @@ def evaluation(selected,cache):
 
     copySelected,copyCache = list(selected),list(cache)
 
-    for i in range(len(cache):
+    for i in range(len(cache)):
 
         if copySelected[i] == copyCache[i]:
 
