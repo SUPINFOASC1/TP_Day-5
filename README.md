@@ -34,7 +34,7 @@ def choose(nbColors=6,nbPawns=4):
 
         else:
 
-            ncorrect = True
+            nocorrect = True
 
     return selected
 
