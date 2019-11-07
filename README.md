@@ -40,7 +40,7 @@ def choose(nbColors=6,nbPawns=4):
 
  
 
-"""Give a name and make comments"""
+"""Valentin and make comments"""
 
 def evaluation(selected,cache):
 
