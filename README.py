@@ -2,7 +2,7 @@
 # tp du jour 5
 from random import randint
 
-"""Antoine and make comments"""('t'('(t')'))
+"""Antoine and make comments"""
 
 def initCache(nbColors=6,nbPawns=4):
 
